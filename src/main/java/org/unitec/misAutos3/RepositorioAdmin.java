@@ -14,5 +14,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author Iván
  */
 public interface RepositorioAdmin extends MongoRepository<Admin,String>{
-    
+    Admin findByUsuario (String usuario);
 }

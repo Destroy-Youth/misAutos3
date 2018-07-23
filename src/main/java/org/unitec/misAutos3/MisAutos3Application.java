@@ -20,7 +20,7 @@ public class MisAutos3Application implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         Admin adm = new Admin("Yop", "234234");
-        repoAdmin.save(adm);
+        repoAdmin.findAll();
         System.out.println("Mensajeguardado");
         
     }
