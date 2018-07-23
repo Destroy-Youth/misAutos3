@@ -1,8 +1,7 @@
 package org.unitec.misAutos3;
 
 
-import model.Admin;
-import model.RepositorioAdmin;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
