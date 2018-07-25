@@ -27,7 +27,8 @@ public class MiUI extends UI {
     @Autowired
     RepositorioAdmin repoAdmin;
     
-    VerticalLayout tabInicio;
+    VerticalLayout layoutVert;
+    TabInicio tabInicio = new TabInicio();
 
     public static Admin admin;
     public static ArrayList<Admin> adminAll;
@@ -41,7 +42,7 @@ public class MiUI extends UI {
     public void autenticacion() {
 
         TabSheet tabs = new TabSheet();
-        tabInicio=new VerticalLayout();
+        layoutVert=new VerticalLayout();
         //Creacion de ventana
         Window subWindowAutenticar = new Window("Login");
         subWindowAutenticar.setClosable(false);
@@ -50,7 +51,7 @@ public class MiUI extends UI {
         subWindowAutenticar.setContent(subLogin);
 
         subWindowAutenticar.center();
-        subWindowAutenticar.setWidth("450px");
+        subWindowAutenticar.setWidth("350px");
         addWindow(subWindowAutenticar);
 
         //Extracción de usuarios
@@ -58,6 +59,7 @@ public class MiUI extends UI {
         ComboBox<Admin> opciones = new ComboBox<>();
         opciones.setPlaceholder("Introduzca su usuario");
         opciones.setItems(adminAll);
+        opciones.setWidth("100%");
         //Añadir usuarios a cob¿mbobox
         opciones.setItemCaptionGenerator(Admin::getUsuario);
 
@@ -75,10 +77,12 @@ public class MiUI extends UI {
         botonAutenticar.addClickListener(ingresar -> {
 
             admin = new Admin();
-            admin = opciones.getValue();
-            System.out.println(admin);
-            if (repoAdmin.findByUsuario(admin.getUsuario()).getPassword().equals(adminPasswordField.getValue().toLowerCase())) {
-
+            admin=opciones.getValue();
+            System.out.println(admin.getUsuario() + adminPasswordField.getValue());
+            System.out.println(admin.getPassword().equals(adminPasswordField.getValue())+"tei");
+            if (admin.getPassword().equals(adminPasswordField.getValue())) {
+            
+            //if(true){
                 String sesionId = VaadinSession.getCurrent().getSession().getId();
                 VaadinSession.getCurrent().setAttribute("idAdmin", admin.getIdAdmin());
 
@@ -94,5 +98,9 @@ public class MiUI extends UI {
             }
 
         });
+    }
+    
+    public void inicio(){
+        
     }
 }
