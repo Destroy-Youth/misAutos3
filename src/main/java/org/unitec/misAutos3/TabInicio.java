@@ -24,10 +24,12 @@ import java.util.Set;
  *
  * @author dova
  */
-
 @UIScope
 @SpringUI
-public class TabInicio extends VerticalLayout{
-    Label prueba = new Label("Estás dentro!");
-    VerticalLayout vr = new VerticalLayout(prueba);
+public class TabInicio extends VerticalLayout {
+
+    
+    public TabInicio() {
+
+    }
 }

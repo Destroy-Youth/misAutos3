@@ -94,7 +94,7 @@ public class MiUI extends UI {
                 tabs.addTab(tabInicio,"Inicio",FontAwesome.BOOK);
             } else {
                 labelBienvenida.addStyleName(ValoTheme.LABEL_FAILURE);
-                labelBienvenida.setValue("DATOS INCORRECTOS");
+                labelBienvenida.setValue("Datos incorrectos");
             }
 
         });
