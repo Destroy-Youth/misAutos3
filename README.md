@@ -2,21 +2,32 @@
 Proyecto final de desarrollo de proyectos en Ing. de sistemas computacionales
 
 
-Direcciones de servicio:
+# Direcciones de servicio:<br>
 Get (find all)
-https://misautos2.herokuapp.com/api/{nombre de entidad}
-
+<br>
+https://misautos2.herokuapp.com/api/ {nombre de entidad}
+<br>
+<br>
 Get (find one)
-https://misautos2.herokuapp.com/api/{nombre de entidad}/{id segun entidad}	 
-
+<br>
+https://misautos2.herokuapp.com/api/ {nombre de entidad}/{id segun entidad}	 
+<br>
+<br>
 Post (save) 
-https://misautos2.herokuapp.com/api/{nombre de entidad}/{parametro 1}/{parametro 2}/.../{parametro n}
-
+<br>
+https://misautos2.herokuapp.com/api/ {nombre de entidad}/{parametro 1}/{parametro 2}/.../{parametro n}
+<br>
+<br>
 Post mejorado (save)
-https://misautos2.herokuapp.com/api/{nombre de entidad}
-
+<br>
+https://misautos2.herokuapp.com/api/ {nombre de entidad}
+<br>
+<br>
 Put (update)
-https://misautos2.herokuapp.com/api/{nombre de entidad}
-
+<br>
+https://misautos2.herokuapp.com/api/ {nombre de entidad}
+<br>
+<br>
 Delete (delete)
-https://misautos2.herokuapp.com/api/{nombre de entidad}
+<br>
+https://misautos2.herokuapp.com/api/ {nombre de entidad}
