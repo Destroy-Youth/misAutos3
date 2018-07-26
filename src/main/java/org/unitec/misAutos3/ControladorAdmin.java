@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Iván
  */
 @RestController
-@RequestMapping("/api")             //("/mensajito") //Identifica la clase para mapeo para servicio web, es un URI.
+@RequestMapping("/api")       //Identifica la clase para mapeo para servicio web, es un URI.
 @CrossOrigin //Permite el paso de información nentre servidores
 
 public class ControladorAdmin {

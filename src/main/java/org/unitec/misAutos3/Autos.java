@@ -7,7 +7,7 @@ package org.unitec.misAutos3;
  */
 
 
-import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 
 /**
@@ -26,13 +26,17 @@ public class Autos {
     private String color;
     private Integer ano;
     private Integer puertas;
-    private Date registro;
+    private String registro;
     private String estatus;
 
     public Autos() {
     }
 
-    public Autos(String placas, String noMotor, String vin, String tipo, String marca, String modelo, String color, Integer ano, Integer puertas, Date registro, String estatus) {
+    public Autos(String idAuto) {
+        this.idAuto = idAuto;
+    }
+
+    public Autos(String placas, String noMotor, String vin, String tipo, String marca, String modelo, String color, Integer ano, Integer puertas, String registro, String estatus) {
         this.placas = placas;
         this.noMotor = noMotor;
         this.vin = vin;
@@ -46,7 +50,7 @@ public class Autos {
         this.estatus = estatus;
     }
 
-    public Autos(String idAuto, String placas, String noMotor, String vin, String tipo, String marca, String modelo, String color, Integer ano, Integer puertas, Date registro, String estatus) {
+    public Autos(String idAuto, String placas, String noMotor, String vin, String tipo, String marca, String modelo, String color, Integer ano, Integer puertas, String registro, String estatus) {
         this.idAuto = idAuto;
         this.placas = placas;
         this.noMotor = noMotor;
@@ -141,11 +145,11 @@ public class Autos {
         this.puertas = puertas;
     }
 
-    public Date getRegistro() {
+    public String getRegistro() {
         return registro;
     }
 
-    public void setRegistro(Date registro) {
+    public void setRegistro(String registro) {
         this.registro = registro;
     }
 

@@ -7,7 +7,7 @@ package org.unitec.misAutos3;
  */
 
 
-import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 
 /**
@@ -22,12 +22,12 @@ public class Alquileres {
     private String idSeguro;
     private Integer duracionDias;
     private double costoTotal;
-    private Date fechaAlquiler;
+    private String fechaAlquiler;
 
     public Alquileres() {
     }
 
-    public Alquileres(String idUsuario, String idAuto, String idSeguro, Integer duracionDias, double costoTotal, Date fechaAlquiler) {
+    public Alquileres(String idUsuario, String idAuto, String idSeguro, Integer duracionDias, double costoTotal, String fechaAlquiler) {
         this.idUsuario = idUsuario;
         this.idAuto = idAuto;
         this.idSeguro = idSeguro;
@@ -36,7 +36,7 @@ public class Alquileres {
         this.fechaAlquiler = fechaAlquiler;
     }
 
-    public Alquileres(String idAlquiler, String idUsuario, String idAuto, String idSeguro, Integer duracionDias, double costoTotal, Date fechaAlquiler) {
+    public Alquileres(String idAlquiler, String idUsuario, String idAuto, String idSeguro, Integer duracionDias, double costoTotal, String fechaAlquiler) {
         this.idAlquiler = idAlquiler;
         this.idUsuario = idUsuario;
         this.idAuto = idAuto;
@@ -44,6 +44,10 @@ public class Alquileres {
         this.duracionDias = duracionDias;
         this.costoTotal = costoTotal;
         this.fechaAlquiler = fechaAlquiler;
+    }
+
+    public Alquileres(String idAlquiler) {
+        this.idAlquiler = idAlquiler;
     }
 
     public String getIdAlquiler() {
@@ -94,11 +98,11 @@ public class Alquileres {
         this.costoTotal = costoTotal;
     }
 
-    public Date getFechaAlquiler() {
+    public String getFechaAlquiler() {
         return fechaAlquiler;
     }
 
-    public void setFechaAlquiler(Date fechaAlquiler) {
+    public void setFechaAlquiler(String fechaAlquiler) {
         this.fechaAlquiler = fechaAlquiler;
     }
     
